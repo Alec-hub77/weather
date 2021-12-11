@@ -15,7 +15,8 @@ export const getWeather = (
   return async (dispatch) => {
     try {
       const res = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?id=${city}&appid=${process.env.REACT_APP_API_KEY}`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=0d5848b4da1ac8999dd26fe81c671c98
+        `
       );
       if (!res.ok) {
         const resData: WeatherError = await res.json();
